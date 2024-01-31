@@ -1,0 +1,25 @@
+package com.example.myapplication.tuan2;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+import com.example.myapplication.R; 
+
+public class MainActivitysecondtuan2 extends AppCompatActivity {
+    TextView tv;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {//A38732 Nguyen Quang Trung
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main_activitysecondtuan2);
+        tv=findViewById(R.id.demotv);
+        Intent i1=GetIntent();
+        String chuoi1=i1.GetExtras().getString("so1");
+        String chuoi2=i1.GetExtras().getString("");
+        float so1=Float.parseFloat(chuoi1);
+        float so2=Float.parseFloat(chuoi2);
+        float tong=so1+so2;
+        tv.setText(String.valueOf(tong));
+
+    }
+}
